@@ -1,0 +1,42 @@
+name: sina_mobile
+description: SINA — Voice-guided mobility assistant for visually impaired users (Android, offline).
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.10.5+9              # Camera preview + frame capture
+  tflite_flutter: ^0.11.0        # YOLOv8 inference (0.11 for Dart 3 compat)
+  flutter_tts: ^4.0.2            # Text-to-speech (FR/EN/AR)
+  speech_to_text: ^7.0.0         # On-device STT (native OS); 7.x for Gradle 9
+  geolocator: ^11.0.0            # GPS coordinates
+  flutter_map: ^6.1.0            # OpenStreetMap (family dashboard)
+  latlong2: ^0.9.1               # LatLng type for flutter_map
+  shared_preferences: ^2.2.3     # Persist settings (language, volume, etc.)
+  permission_handler: ^11.3.1    # Camera + mic + location permissions
+  url_launcher: ^6.2.6           # tel: scheme for SOS call, WhatsApp deep link
+  vibration: ^2.0.0              # Haptic feedback (2.x drops v1 embedding)
+  wakelock_plus: ^1.2.5          # Keep screen on during detection
+  image: ^4.1.7                  # Image preprocessing for TFLite
+  flutter_local_notifications: ^17.1.2  # SOS push notification
+  audioplayers: ^6.1.0           # Spatial earcons (stereo pan + pitch by distance)
+  google_mlkit_text_recognition: ^0.13.0  # On-device OCR (Read Text mode)
+  battery_plus: ^6.0.0           # Battery-aware inference throttling
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Reference the directory so the build succeeds even before the model
+    # is downloaded. Place yolov8n.tflite here (see README) for detection.
+    - assets/models/
+    - assets/audio/

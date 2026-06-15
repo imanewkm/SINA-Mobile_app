@@ -1,0 +1,74 @@
+# ── Flutter / Dart (sina_mobile) ─────────────────────────────────────────────
+sina_mobile/.dart_tool/
+sina_mobile/.flutter-plugins
+sina_mobile/.flutter-plugins-dependencies
+sina_mobile/build/
+sina_mobile/.idea/
+sina_mobile/android/.gradle/
+sina_mobile/android/local.properties
+sina_mobile/android/app/debug/
+sina_mobile/android/app/profile/
+sina_mobile/android/app/release/
+sina_mobile/ios/Pods/
+sina_mobile/ios/.symlinks/
+**/*.g.dart
+.dart_tool/
+.packages
+
+# ── Python model tooling (scripts/) ──────────────────────────────────────────
+venv/
+env/
+ENV/
+.venv
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# ── YOLO weights / training output (large) ───────────────────────────────────
+# NOTE: the shipped model sina_mobile/assets/models/yolov8n.tflite is tracked.
+runs/
+*.pt
+*.pth
+yolov8n_saved_model/
+
+# ── Datasets (large) ─────────────────────────────────────────────────────────
+dataset/
+*.zip
+*.tar
+*.tar.gz
+
+# ── Report (not pushed to GitHub) ────────────────────────────────────────────
+# The entire end-of-studies report (LaTeX source, built PDF, figures) is kept
+# out of the repo.
+report/
+
+# ── LaTeX build intermediates (anywhere) ─────────────────────────────────────
+# Regenerated on every compile.
+*.aux
+*.lof
+*.lot
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# ── IDE / OS ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.log
+
+# ── Env / Claude ─────────────────────────────────────────────────────────────
+.env
+.env.local
+.claude/
+.claudeignore
+.claude.json
+CLAUDE.md
