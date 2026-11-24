@@ -1,4 +1,4 @@
-# SINA — Voice-Guided Mobility Assistant (Mobile)
+# Voice-Guided Mobility Assistant (Mobile)
 
 SINA is a free, open-source Android app that helps visually impaired users move
 around safely. It runs **fully offline on the phone**: the camera detects
